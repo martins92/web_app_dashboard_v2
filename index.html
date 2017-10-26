@@ -3,36 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App Dashboard</title>
+    <title>Webly</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- ***** HEADER SECTION *****-->
     <header>
       <ul class="header__main">
-        <li class="menu__main">
+        <li class="menu__main pointer">
           <svg width="34" height="18" viewBox="0 0 34 18" xmlns="http://www.w3.org/2000/svg"><title>menu copy</title><g fill="#FFF" fill-rule="evenodd"><rect y="14" width="34" height="4" rx="1"/><rect y="7" width="34" height="4" rx="1"/><rect width="34" height="4" rx="1"/></g></svg>
-        <li class="header-logo__main">
-          <b class="b1">Your</b><b class="b2">App</b><b class="b3">TM</b>
-        </li>
-        <li tabindex="5" class="avatar__main">
+        <li tabindex="6" class="avatar__main">
+            <div  tabindex="7" class="alert__icon pointer">
+              <img class="alert__icon__main pointer" src="icons/icon-bell.svg" alt="notification">
+              <div class="online-status"></div>
+            </div>
             <div class="avatar-image__container">
               <img class="avatar-image" src="icons/8.jpg" alt="avatar image">
-              <div class="online-status"></div>
+            </div>
+            <div class="avatar__name">
+              <p>Emily Franklin</p>
             </div>
         </li>
       </ul>
+    </header>
+    <!-- ***** MAIN SECTION *****-->
+    <main>
       <ul class="dropdown-content">
-        <li tabindex="1" class="dropdown-content__icon dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard"></li>
-        <li tabindex="2" class="dropdown-content__icon members"><img src="icons/icon-members.svg" alt="members"></li>
-        <li tabindex="3" class="dropdown-content__icon visits"><img src="icons/icon-visits.svg" alt="visits"></li>
-        <li tabindex="4" class="dropdown-content__icon settings"><img src="icons/icon-settings.svg" alt="settings"></li>
+        <li tabindex="2" class="dropdown-content__icon dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard"></li>
+        <li tabindex="3" class="dropdown-content__icon members"><img src="icons/icon-members.svg" alt="members"></li>
+        <li tabindex="4" class="dropdown-content__icon visits"><img src="icons/icon-visits.svg" alt="visits"></li>
+        <li tabindex="5" class="dropdown-content__icon settings"><img src="icons/icon-settings.svg" alt="settings"></li>
         <li class="search"><input type="text" class="search-bar"></li>
       </ul>
-    </header>
-    <main>
-
+      <div class="notification__container--primary">
+        <ul class="notification__container--secondary">
+          <li class="notification__list notification__separation__border">You have 3 new messages<img class="notification__remove__icon" tabindex="8" src="icons/green_delete.svg" alt="delete"></li>
+          <li class="notification__list notification__separation__border">You have one pending friend request<img class="notification__remove__icon" tabindex="9" src="icons/green_delete.svg" alt="delete"></li>
+          <li class="notification__list">You have 4 new mentions<img class="notification__remove__icon" tabindex="10" src="icons/green_delete.svg" alt="delete"></li>
+          <li class="notification__remove__menu"></li>
+        </ul>
+      </div>
+      <div class="alert-box__container">
+        <div class="alert-box">
+          <strong class="alert block margin">Alert</strong><p class="alert-text block margin">Please close this box!</p><span class="alert-box__icon__container block margin"><img class="close__icon pointer" src="icons/close.svg" alt="close button"></span>
+        </div>
+      </div>
+      <div class="chart__buttons">
+        <button class="btn" type="button" name="button"></button>
+        <button class="btn" type="button" name="button"></button>
+        <button class="btn" type="button" name="button"></button>
+        <button class="btn" type="button" name="button"></button>
+      </div>
+      <div class="chart__layout">
+        <canvas id="myChart"></canvas>
+      </div>
+      <!-- <div class="chart__layout">
+        <canvas id="myChart2"></canvas>
+      </div>
+      <div class="chart__layout">
+        <canvas id="myChart3"></canvas>
+      </div> -->
     </main>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
