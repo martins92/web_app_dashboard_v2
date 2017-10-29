@@ -29,6 +29,7 @@
     </header>
     <!-- ***** MAIN SECTION *****-->
     <main>
+      <!-- ***** DROP DOWN MENU *****-->
       <ul class="dropdown-content">
         <li tabindex="2" class="dropdown-content__icon dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard"></li>
         <li tabindex="3" class="dropdown-content__icon members"><img src="icons/icon-members.svg" alt="members"></li>
@@ -36,34 +37,222 @@
         <li tabindex="5" class="dropdown-content__icon settings"><img src="icons/icon-settings.svg" alt="settings"></li>
         <li class="search"><input type="text" class="search-bar"></li>
       </ul>
-      <div class="notification__container--primary">
-        <ul class="notification__container--secondary">
-          <li class="notification__list notification__separation__border">You have 3 new messages<img class="notification__remove__icon" tabindex="8" src="icons/green_delete.svg" alt="delete"></li>
-          <li class="notification__list notification__separation__border">You have one pending friend request<img class="notification__remove__icon" tabindex="9" src="icons/green_delete.svg" alt="delete"></li>
-          <li class="notification__list">You have 4 new mentions<img class="notification__remove__icon" tabindex="10" src="icons/green_delete.svg" alt="delete"></li>
-          <li class="notification__remove__menu"></li>
-        </ul>
-      </div>
-      <div class="alert-box__container">
-        <div class="alert-box">
-          <strong class="alert block margin">Alert</strong><p class="alert-text block margin">Please close this box!</p><span class="alert-box__icon__container block margin"><img class="close__icon pointer" src="icons/close.svg" alt="close button"></span>
+      <div class="widget-wrapper">
+        <!-- ***** NOTIFICATION MENU *****-->
+        <div class="notification__container--primary">
+          <ul class="notification__container--secondary">
+            <li class="notification__list notification__separation__border">You have 3 new messages<img class="notification__remove__icon" tabindex="8" src="icons/green_delete.svg" alt="delete"></li>
+            <li class="notification__list notification__separation__border">You have one pending friend request<img class="notification__remove__icon" tabindex="9" src="icons/green_delete.svg" alt="delete"></li>
+            <li class="notification__list">You have 4 new mentions<img class="notification__remove__icon" tabindex="10" src="icons/green_delete.svg" alt="delete"></li>
+            <li class="notification__remove__menu"></li>
+          </ul>
+        </div>
+        <!-- ***** SEARCH BAR 769px *****-->
+        <div class="search-bar-large__container">
+          <h1>Dashboard</h1>
+          <div class="search-bar-large">
+            <input type="text" class="search-bar-large__input">
+          </div>
+        </div>
+        <!-- ***** ALERT BOX *****-->
+        <div class="alert-box__container">
+          <div class="alert-box">
+            <strong class="alert block margin">Alert</strong><p class="alert-text block margin">Please close this box!</p><span class="alert-box__icon__container block margin"><img class="close__icon pointer" src="icons/close.svg" alt="close button"></span>
+          </div>
+        </div>
+        <!-- ***** CHART BUTTONS *****-->
+        <div class="chart__buttons">
+          <button class="btn" type="button" data-type="hourly" name="button">Hourly</button>
+          <button class="btn" type="button" data-type="daily" name="button">Daily</button>
+          <button class="btn" type="button" data-type="weekly" name="button">Weekly</button>
+          <button class="btn" type="button" data-type="monthly" name="button">Monthly</button>
+        </div>
+        <!-- ***** CHARTS*****-->
+        <div class="chart__container bd-bt bd-bt__reset">
+          <div class="label">
+            <h3>Traffic</h3>
+          </div>
+          <div class="chart__layout">
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+        <div class="bar-donut-chart bd-bt">
+          <div class="chart__container">
+            <div class="label">
+              <h3>Daily Traffic</h3>
+            </div>
+            <div class="chart__layout">
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+          <div class="chart__container">
+            <div class="label">
+              <h3>Mobilse users</h3>
+            </div>
+            <div class="chart__layout">
+              <canvas id="donutChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- ***** SOCIAL SITES *****-->
+        <div class="bd-bt bd-bt__reset">
+          <div class="social__layout">
+            <div class="label">
+              <h3>Social stats</h3>
+            </div>
+            <div class="social__layout__container">
+              <div class="social">
+                <span class="social__icon"><img src="icons/twitter.svg" alt="social icon"></span>
+                <div class="social__name">
+                  <p>Twitter</p>
+                  <strong>10,345</strong>
+                </div>
+              </div>
+              <div class="social">
+                <span class="social__icon"><img src="icons/facebook.svg" alt="social icon"></span>
+                <div class="social__name">
+                  <p>Facebook</p>
+                  <strong>8,739</strong>
+                </div>
+              </div>
+              <div class="social">
+                <span class="social__icon"><img src="icons/google+.svg" alt="social icon"></span>
+                <div class="social__name">
+                  <p>Google+</p>
+                  <strong>2,530</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ***** NEW MEMBERS *****-->
+        <div class="bd-bt bd-bt__reset members__container">
+          <div class="new-memebers__layout">
+            <div class="label">
+              <h3>New members</h3>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/victoria.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Victoria Chambers</p>
+                <i>victoria.chambers80@exampl.com</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/dale.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dale Byrd</p>
+                <i>dale.byrd52@exampl.com</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/dawn.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dawn Wood</p>
+                <i>dawn.wood16@exampl.com</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt border-bt__reset">
+              <span class=""><img class="avatar-image" src="icons/dan.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dan Oliver</p>
+                <i>dan.oliver82@exampl.com</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+          </div>
+
+          <!-- ***** RECENT ACTIVITY *****-->
+          <div class="new-memebers__layout">
+            <div class="label">
+              <h3>Recent activity</h3>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/victoria.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Victoria Chambers commented on Webly app</p>
+                <i>4 hours ago</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/dale.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dale Byrd like the post Facebook's changes for 2017</p>
+                <i>5 hours ago</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt">
+              <span class=""><img class="avatar-image" src="icons/dawn.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dawn Wood commented on Facebook's changes for 2017</p>
+                <i>3 hours ago</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+            <div class="new-members-profile border-bt border-bt__reset">
+              <span class=""><img class="avatar-image" src="icons/dan.jpg" alt="avatar image"></span>
+              <div class="new-members-profile__data">
+                <p>Dan Oliver posted Webly SEO tips</p>
+                <i>4 hours ago</i>
+              </div>
+              <i class="date">10/15/15</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- ***** MESSAGE USER *****-->
+        <div class="bd-bt bd-bt__reset members__container">
+          <div class="new-memebers__layout">
+            <div class="label">
+              <h3>Message user</h3>
+            </div>
+            <div class="message-user-search__container">
+              <input type="text" class="message-user-search">
+              <textarea class="message-user-textarea" name="name" rows="8" cols="80"></textarea>
+              <button class="btn" type="button" name="button">send</button>
+            </div>
+        </div>
+        <!-- ***** SETTINGS *****-->
+        <div class="new-memebers__layout">
+          <div class="label">
+            <h3>Settings</h3>
+          </div>
+          <div class="message-user-search__container">
+            <div class="switch">
+              <p>Send email notification</p>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                <label class="onoffswitch-label" for="myonoffswitch"></label>
+              </div>
+            </div>
+            <div class="switch">
+              <p>Set profile to public</p>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch2">
+                <label class="onoffswitch-label" for="myonoffswitch2"></label>
+              </div>
+            </div>
+            <div class="select-style">
+              <select class="select" name="select">
+                <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+                <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+                <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US and Canada)</option>
+              </select>
+            </div>
+            <div class="settings-buttons">
+              <button class="btn" type="button" name="button">save</button>
+              <button class="btn" type="button" name="button">scancel</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="chart__buttons">
-        <button class="btn" type="button" name="button"></button>
-        <button class="btn" type="button" name="button"></button>
-        <button class="btn" type="button" name="button"></button>
-        <button class="btn" type="button" name="button"></button>
-      </div>
-      <div class="chart__layout">
-        <canvas id="myChart"></canvas>
-      </div>
-      <!-- <div class="chart__layout">
-        <canvas id="myChart2"></canvas>
-      </div>
-      <div class="chart__layout">
-        <canvas id="myChart3"></canvas>
-      </div> -->
     </main>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
     <script type="text/javascript" src="js/chart.js"></script>

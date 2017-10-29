@@ -107,7 +107,7 @@ notificationDropDown.addEventListener('click', (e)=> {
       upToDate.classList.add('notif__p');
       const ul = document.querySelector('.notification__container--secondary');
       ul.appendChild(upToDate);
-      statusIcon.style.background = '#F1948E';
+      statusIcon.style.background = '#F1C38E';
     }
   }
 });
