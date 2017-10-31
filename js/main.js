@@ -9,6 +9,7 @@ const dropDownMenu = document.querySelector('.dropdown-content');
 const alertBox = document.querySelector('.alert-box__container');
 const searchBar = document.querySelector('.search-bar');
 const container = document.querySelector('.notification__container--primary');
+const sendButton = document.querySelector('.send-btn');
 let count = 0;
 
 /* ====================================
@@ -109,5 +110,16 @@ notificationDropDown.addEventListener('click', (e)=> {
       ul.appendChild(upToDate);
       statusIcon.style.background = '#F1C38E';
     }
+  }
+});
+
+sendButton.addEventListener('click', ()=>{
+  let textArea = document.querySelector('.message-user-textarea');
+  if (textArea.value === '') {
+    textArea.classList.remove('success');
+    textArea.classList.add('error');
+  } else {
+    textArea.classList.remove('error');
+    textArea.classList.add('success');
   }
 });

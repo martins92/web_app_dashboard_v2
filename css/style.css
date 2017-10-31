@@ -539,6 +539,16 @@ button {
 	font-weight: normal;
 }
 
+.error {
+	border: 2px solid rgb(236, 86, 77);
+	transition: .25s;
+}
+
+.success {
+	border: 2px solid rgb(55, 189, 57);
+	transition: .25s;
+}
+
 /* =================================
   Animations
 ==================================== */
